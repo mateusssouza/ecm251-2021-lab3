@@ -1,0 +1,91 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Brawl Review',
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.black,
+        primarySwatch: Colors.deepOrange,
+      ),
+      home: MinhaPagina(),
+      child: 
+    );
+  }
+}
+
+
+class MinhaPagina extends StatelessWidget {
+  const MinhaPagina({ Key? key }) : super(key: key);
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: Image.network("https://th.bing.com/th/id/R.687005958b0e38b7a4c8e39436db5cef?rik=TDDcWFc9N38nJg&riu=http%3a%2f%2fcms.egg.network%2fmedia%2fimages%2fLogo_brawlstars_NOGUNS_Final.original.png&ehk=HAFdbvhnjiwAZuzrpYYpsEWc3x%2bCZ%2fl7MH1h%2f9tHTqI%3d&risl=&pid=ImgRaw&r=0", fit: BoxFit.cover, height: 60)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+          bottom: Radius.circular(30),
+          ),
+        ),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: const <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.deepOrangeAccent,
+              ),
+              child: Text(
+                'Brawl Menu',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.comment),
+              title: Text('Faça sua review'),
+            ),
+            ListTile(
+              leading: Icon(Icons.search),
+              title: Text('Buscar review'),
+            ),
+            ListTile(
+              leading: Icon(Icons.logout),
+              title: Text('Logout'),
+            ),
+          ],
+        ),
+      ),
+      body: Column(
+        children: [
+            Text(
+              "Voce gosta de Brawl Stars?",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 12,
+                ),
+              ),
+            Image.network("https://img.redbull.com/images/c_fill,g_auto,w_1500,h_1000/q_auto,f_auto/redbullcom/2018/12/14/7518db4d-58a6-4868-aa3c-748ad1dd6dd7/brawl-stars"),
+        ],
+      )
+    );
+  }
+}
+
+class SideMenu extends StatelessWidget {
+  const SideMenu({ Key? key }) : super(key: key);
+
+}
