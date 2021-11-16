@@ -6,5 +6,3 @@ class User{
   final String brawlerFavorito;
 User({required this.name, required this.url, required this.brawlerFavorito, });
 }
-
-
