@@ -1,4 +1,4 @@
-package br.maua.Entidades
+package maua.br.Entidades
 
 
 import org.ktorm.schema.Table

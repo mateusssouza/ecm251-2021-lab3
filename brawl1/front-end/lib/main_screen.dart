@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'models/review.dart';
 import '../sidebar.dart';
-import 'usuario.dart';
+import 'user.dart';
 
 class MainPage extends StatelessWidget {
   final List<Reviews> reviews;
@@ -124,7 +124,7 @@ class MainPage extends StatelessWidget {
     Widget userBrowlerFavorito(Reviews reviews) {
       return  Container(
         margin: EdgeInsets.fromLTRB(0, 0, 10.0, 0),
-        child: Text(reviews.brawlerFavorito, style:  TextStyle(fontSize: 12.0, color: Colors.white)),
+        child: Text(reviews.brawler, style:  TextStyle(fontSize: 12.0, color: Colors.white)),
       );
     }
 
@@ -138,7 +138,7 @@ class MainPage extends StatelessWidget {
     Widget userModoDeJogo(){
       return Container(
         margin: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 2.0),
-        child: Text('Modo de Jogo:', style:  TextStyle(fontSize: 12.0, color: Colors.white)),
+        child: Text('Game mode:', style:  TextStyle(fontSize: 12.0, color: Colors.white)),
       );
     }
 
@@ -146,7 +146,7 @@ class MainPage extends StatelessWidget {
       return Container(
         // margin: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 2.0),
         child:
-          Text(reviews.modoDeJogo,
+          Text(reviews.gameMode,
             style:
               TextStyle(
                 fontSize: 16.0,
@@ -158,7 +158,7 @@ class MainPage extends StatelessWidget {
       return Container(
         margin: EdgeInsets.fromLTRB(10,20,10,10),
         child: Text(
-          reviews.textoReview,
+          reviews.reviewText,
           style: 
             TextStyle(
               color: Colors.white,

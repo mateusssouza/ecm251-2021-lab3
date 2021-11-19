@@ -1,8 +1,6 @@
 package maua.br
 
-import br.maua.Entidades.AvaliacaoEntidade
-import maua.br.Entidades.*
-import maua.br.plugins.*
+import maua.br.Entidades.AvaliacaoEntidade
 import io.ktor.application.*
 import io.ktor.features.*
 import io.ktor.serialization.*

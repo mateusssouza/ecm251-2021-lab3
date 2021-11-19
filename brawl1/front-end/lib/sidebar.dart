@@ -1,7 +1,7 @@
-import 'package:brawl1/escrever_review.dart';
+import 'package:brawl1/review_screen.dart';
 import 'package:brawl1/pre_login.dart';
-import 'package:brawl1/testando.dart';
-import 'package:brawl1/usuario.dart';
+import 'package:brawl1/main_screen.dart';
+import 'package:brawl1/user.dart';
 import 'package:flutter/material.dart';
 import 'styles.dart';
 import 'mocks/mock_review.dart';
@@ -26,7 +26,7 @@ class NavDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.home),
-            title: Text('Pagina principal'),
+            title: Text('Main Page'),
             onTap: () => {
               Navigator.push(
                 context,
@@ -41,22 +41,17 @@ class NavDrawer extends StatelessWidget {
           // ),
           ListTile(
             leading: Icon(Icons.border_color),
-            title: Text('Escreva uma review'),
+            title: Text('Write a review'),
             onTap: () => {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => EscreverReview(MockUser.items)),
+                MaterialPageRoute(builder: (context) => InsertReview(MockUser.items)),
               )
             },
           ),
           ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('Settings'),
-            onTap: () => {Navigator.of(context).pop()},
-          ),
-          ListTile(
             leading: Icon(Icons.person),
-            title: Text('Minha Conta'),
+            title: Text('My account'),
             onTap: () => {
               // Navigator.of(context).pop()
               Navigator.push(

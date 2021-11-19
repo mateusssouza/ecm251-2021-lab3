@@ -1,6 +1,6 @@
 package br.maua.routing
 
-import br.maua.Entidades.AvaliacaoEntidade
+import maua.br.Entidades.AvaliacaoEntidade
 import br.maua.db.DatabaseConector
 import maua.br.modelos.Avaliacao
 import io.ktor.routing.*

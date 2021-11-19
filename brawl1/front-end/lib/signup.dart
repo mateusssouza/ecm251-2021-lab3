@@ -1,5 +1,9 @@
 
+import 'package:brawl1/login.dart';
 import 'package:flutter/material.dart';
+
+import 'main_screen.dart';
+import 'mocks/mock_review.dart';
 
 class SignupPage extends StatelessWidget {
   @override
@@ -71,19 +75,15 @@ class SignupPage extends StatelessWidget {
                         padding: EdgeInsets.symmetric(horizontal: 40),
                         child: Container(
                           padding: EdgeInsets.only(top: 3,left: 3),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40),
-                            border: Border(
-                              bottom: BorderSide(color: Colors.black),
-                              top: BorderSide(color: Colors.black),
-                              right: BorderSide(color: Colors.black),
-                              left: BorderSide(color: Colors.black)
-                            )
-                          ),
                           child: MaterialButton(
                             minWidth: double.infinity,
                             height:60,
-                            onPressed: (){},
+                            onPressed: (){
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) =>MainPage(MockReview.items))
+                              );
+                            },
                             color: Colors.deepOrange,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(40)
@@ -91,6 +91,7 @@ class SignupPage extends StatelessWidget {
                             child: Text(
                               "Sign Up",
                               style: TextStyle(
+                                color: Colors.white,
                                 fontWeight: FontWeight.w600,fontSize: 16,
                               ),
                             ),
@@ -102,18 +103,23 @@ class SignupPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text("Already have an account? "),
-                          Text(
-                            "Login",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18
+                          TextButton(
+                            style: TextButton.styleFrom(
+                            padding: const EdgeInsets.all(16.0),
+                            primary: Colors.white,
+                            textStyle: const TextStyle(fontSize: 20),
                             ),
+                            onPressed: () {
+                              Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => LoginPage())
+                              );
+                            },
+                            child: const Text('Login'),
                           ),
                         ],
                       )
                     ],
-
                   ),
                 ],
               ),

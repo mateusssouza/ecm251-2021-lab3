@@ -1,6 +1,6 @@
-import 'package:brawl1/usuario.dart';
+import 'package:brawl1/user.dart';
 
-import '../testando.dart';
+import '../main_screen.dart';
 import '../models/review.dart';
 
 mixin MockUser implements User {
