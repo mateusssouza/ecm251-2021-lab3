@@ -1,18 +1,36 @@
-# BrawlStars Review Projeto
+# BrawlStars Review
 
-The project is based on a flutter file, it is highly recomended that you open the front-end project using Visual Studio Code, because it will download the necessaries packages to run this project automatically.
 This is a project to a computing engenniering class.
 The main objective was to create a web-site to review a character of a game, and we choose Brawl Stars to be our game. You can review a character on a specific game mode, letting all the brawl community to know what you think. 
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+- The project data base was made with MariaDb Virtual Machine and used DBeaver to manage the data base, along with the get and post commands from the back-end code.
+- The data base has four tables *-* : 
+  * Avaliacao (Where the avaliantions are storaged)
+    * id ( primary key that refers to the avaliation indentificator )
+    * Texto de opiniao ( Where the review text is stored )
+    * idUsuario ( a foreigh key that connects the user to the review made )
+    * idModo ( a foreigh key that connects a game mode to the review made )
+    * idPersonagem ( a foreigh key that connects the character to the review made )
+    
+  * Modo de jogo (Where the information about the game mode is stored)
+    * idModo ( primary key that refers to the mode indentificator )
+    * Nome do modo ( Where the game mode name is stored )
+    
+  * Personagem (Where the information about the character is stored)
+    * idPersonagem ( primary key that refers to the character indentificator )
+    * Nome do personagem ( Where the character name is stored )
+    * Ataque ( Where the character attack value is stored )
+    * Defesa ( Where the character defense value is stored )
+    * Utilidade ( Where the character utility value is stored )
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+  * Usuario (Where the information about the user is stored)
+    * idUsuario ( primary key that refers to the user indentificator )
+    * Nome ( Where the user name is stored )
+    * Senha ( Where the user password is stored )
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- The back-end is a Kotlin project using Gradle.
+- Ideally, the project has routing to connect front and back-end
+
