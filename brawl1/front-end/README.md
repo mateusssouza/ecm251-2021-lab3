@@ -1,4 +1,4 @@
-# BrawlStars Review Projeto
+# BrawlStars Review
 
 The project is based on a flutter file, it is highly recomended that you open the front-end project using Visual Studio Code, because it will download the necessaries packages to run this project automatically.
 This is a project to a computing engenniering class.
